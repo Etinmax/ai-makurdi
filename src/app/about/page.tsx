@@ -114,14 +114,14 @@ export default function AboutPage() {
       {/* Content */}
      <div className="relative z-10 max-w-[900px] px-6">
   <h1
-    className="text-5xl font-bold leading-tight"
+    className="md:text-5xl text-4xl font-bold leading-tight"
     style={{ animation: "slideUp 1.5s ease 0.3s forwards", opacity: 0 }}
   >
     About Augustinian Institute
   </h1>
 
   <p
-    className="mt-4 text-xl font-normal"
+    className="mt-4 md:text-xl text-lg font-normal"
     style={{ animation: "slideUp 1.5s ease 0.3s forwards", opacity: 0 }}
   >
     Discover our rich heritage, mission, and commitment to holistic education
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
       {/* ── OUR STORY ──────────────────────────────────────────────────────── */}
      <section className="w-full bg-[#eef0ff] py-20">
-      <div className="max-w-full mx-auto px-[75px] 2xl:max-w-[1300px] ">
+      <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px] 2xl:max-w-[1300px] ">
 
         {/* Title */}
         <div className="text-center mb-14">
@@ -182,7 +182,7 @@ export default function AboutPage() {
 
       {/* ── MISSION & VISION ───────────────────────────────────────────────── */}
     <section className="w-full bg-white py-20">
-      <div className="max-w-full mx-auto px-[75px] 2xl:max-w-[1300px]">
+      <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px] 2xl:max-w-[1300px]">
 
         {/* Heading */}
         <div className="text-center mb-14">
@@ -249,7 +249,7 @@ Article 4: Objectives
 
       {/* ── CORE VALUES ────────────────────────────────────────────────────── */}
       <section className="w-full bg-[#eef0ff] py-20">
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-full px-4 sm:px-8 md:px-[75px] mx-auto ">
 
         {/* Heading */}
         <div className="text-center mb-14">
@@ -281,7 +281,7 @@ Article 4: Objectives
 
       {/* ── LEADERSHIP ─────────────────────────────────────────────────────── */}
       <section className="w-full bg-white py-20">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[#1e2a78] mb-3">Our Leadership</h2>
             <div className="w-14 h-[3px] bg-[#1e2a78] rounded-full mx-auto" />
@@ -307,77 +307,74 @@ Article 4: Objectives
       </section>
 
       {/* ── HISTORY TIMELINE ───────────────────────────────────────────────── */}
-       <section className="w-full bg-[#eef0ff] py-20">
-      <div className="max-w-[1000px] mx-auto px-8">
+<section className="w-full bg-[#eef0ff] py-20">
+  <div className="max-w-[1000px] mx-auto px-4 md:px-8">
 
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-[#1e2a78] mb-3">Our History</h2>
-          <div className="w-16 h-[3px] bg-[#1e2a78] rounded-full mx-auto" />
-        </div>
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold text-[#1e2a78] mb-3">Our History</h2>
+      <div className="w-16 h-[3px] bg-[#1e2a78] rounded-full mx-auto" />
+    </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Center vertical line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[5px] bg-[#26308f]" />
+    {/* Timeline */}
+    <div className="relative">
 
-          <div className="flex flex-col">
-            {timeline.map((item, i) => (
-              <div key={i} className="relative flex items-start mb-10">
+      {/* Vertical line — center on desktop, left on mobile */}
+      <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[5px] bg-[#26308f]" />
 
-                {/* LEFT side */}
-                <div className="w-1/2 pr-12 flex justify-end">
-                  {item.side === "left" ? (
-                    <div className="relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]">
-                      <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.year}</h3>
-                      <p className="text-[16px] font-normal text-[#333333] leading-6">{item.desc}</p>
-                      {/* Arrow on right edge of card pointing right → toward line */}
-                      <div className="absolute top-[22px] -right-[8px]
-                        w-0 h-0
-                        border-t-[8px] border-t-transparent
-                        border-b-[8px] border-b-transparent
-                        border-l-[8px] border-l-[#26308f]" />
-                    </div>
-                  ) : (
-                    <div className="w-full max-w-[340px]" />
-                  )}
+      <div className="flex flex-col">
+        {timeline.map((item, i) => (
+          <div key={i} className="relative flex items-start mb-10">
+
+            {/* MOBILE: all cards on right. DESKTOP: left/right split */}
+
+            {/* LEFT side — hidden on mobile */}
+            <div className="hidden md:flex w-1/2 pr-12 justify-end">
+              {item.side === "left" ? (
+                <div className="relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]">
+                  <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.year}</h3>
+                  <p className="text-[16px] font-normal text-[#333333] leading-6">{item.desc}</p>
+                  <div className="absolute top-[22px] -right-[8px] w-0 h-0
+                    border-t-[8px] border-t-transparent
+                    border-b-[8px] border-b-transparent
+                    border-l-[8px] border-l-[#26308f]" />
                 </div>
+              ) : (
+                <div className="w-full max-w-[340px]" />
+              )}
+            </div>
 
-                {/* Center dot */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-[18px] z-10">
-                  <div className="w-5 h-5 rounded-full border-3 border-[#1e2a78] bg-[#eef0ff]" />
-                </div>
+            {/* Center dot — left-aligned on mobile, centered on desktop */}
+            <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 top-[18px] z-10">
+              <div className="w-5 h-5 rounded-full border-[3px] border-[#1e2a78] bg-[#eef0ff]" />
+            </div>
 
-                {/* RIGHT side */}
-                <div className="w-1/2 pl-12 flex justify-start">
-                  {item.side === "right" ? (
-                    <div className="relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]">
-                      <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.year}</h3>
-                      <p className="text-[16px] font-normal text-[#333333] leading-6">{item.desc}</p>
-                      {/* Arrow on left edge of card pointing left ← toward line */}
-                      <div className="absolute top-[22px] -left-[8px]
-                        w-0 h-0
-                        border-t-[8px] border-t-transparent
-                        border-b-[8px] border-b-transparent
-                        border-r-[8px] border-r-[#26308f]" />
-                    </div>
-                  ) : (
-                    <div className="w-full max-w-[340px]" />
-                  )}
-                </div>
-
+            {/* RIGHT side — full width on mobile, half on desktop */}
+            <div className="w-full pl-12 md:w-1/2 md:pl-12 flex justify-start">
+              {/* Mobile: show all cards. Desktop: only right-side cards */}
+              <div className={`${item.side === "right" ? "block" : "block md:hidden"} relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]`}>
+                <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.year}</h3>
+                <p className="text-[16px] font-normal text-[#333333] leading-6">{item.desc}</p>
+                {/* Arrow pointing left toward the line */}
+                <div className="absolute top-[22px] -left-[8px] w-0 h-0
+                  border-t-[8px] border-t-transparent
+                  border-b-[8px] border-b-transparent
+                  border-r-[8px] border-r-[#26308f]" />
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 
       {/* ── STATS ──────────────────────────────────────────────────────────── */}
-      <section className="w-full min-h-[345px] bg-[#26308f] flex justify items-center text-center ">
+      <section className="w-full min-h-[345px] bg-[#26308f] py-10 flex justify items-center text-center ">
         <div className="max-w-[1100px] mx-auto px-8 ">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-30 text-center text-white">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-30 text-center text-white">
             {stats.map((s, i) => (
               <div key={i}>
                 <div className="text-[48px] font-bold text-white">{s.value}</div>

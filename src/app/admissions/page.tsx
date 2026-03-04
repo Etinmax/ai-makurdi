@@ -124,20 +124,20 @@ export default function AdmissionsPage() {
       {/* ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           Navy gradient bg, centred text, pill badge
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="w-full 2xl:h-[532px] lg:min-h-[400px] flex flex-col items-center justify-center bg-[#757bb7] text-white text-center relative overflow-hidden">
+      <section className="w-full 2xl:h-[532px] lg:min-h-[400px] py-10 flex flex-col items-center justify-center bg-[#757bb7] text-white text-center relative overflow-hidden">
   <div
     className="absolute inset-0 opacity-20"
     style={{ backgroundImage: "radial-gradient(ellipse at 30% 60%, #5568e8 0%, transparent 55%), radial-gradient(ellipse at 70% 40%, #3a4fd4 0%, transparent 55%)" }}
   />
   <div className="relative z-10 max-w-[715px] mx-auto px-8">
     <h2
-      className="text-[40px] font-[600] mb-4 leading-tight tracking-normal"
+      className="text-[30px] md:text-[40px] font-[600] mb-4 leading-tight tracking-normal"
       style={{ animation: "slideUp 1.5s ease-out 0.3s forwards", opacity: 0 }}
     >
       Begin Your Academic Journey With Us
     </h2>
     <p
-      className="text-[19.2px] text-white font-[400] leading-relaxed mb-10"
+      className="text-[15.2px] md:text-[19.2px] text-white font-[400] leading-relaxed mb-10"
       style={{ animation: "slideUp 1.5s ease-out 0.3s forwards", opacity: 0 }}
     >
       Join a community dedicated to academic excellence, spiritual formation, and intellectual development
@@ -164,7 +164,7 @@ export default function AdmissionsPage() {
           Button: solid blue, bottom-left
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="w-full bg-[#eef0ff] py-20">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Available Programs" />
           <div className="grid md:grid-cols-2 gap-6 max-w-[800] ">
 
@@ -237,7 +237,7 @@ export default function AdmissionsPage() {
           Bullet dot list
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="w-full bg-white py-20">
-        <div className="max-w-[1115px] mx-auto px-8 2xl:max-w-[1300px]">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px] 2xl:max-w-[1300px]">
           <SectionHeading title="Admission Requirements" />
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -328,7 +328,7 @@ export default function AdmissionsPage() {
           Hover: card lifts up
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="w-full bg-[#eef0ff] py-20">
-        <div className="max-w-[1100px] mx-auto 2xl:max-w-[1300px] px-8">
+        <div className="max-w-full mx-auto 2xl:max-w-[1300px] px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Admission Process" />
           {/* Extra top padding on grid to give room for the overflowing badge */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 pt-5">
@@ -418,81 +418,73 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* ━━━ ADMISSION TIMELINE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          Section bg: #ffffff white
-          Alternating left/right, center vertical line, dot, arrow cards
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="w-full bg-white py-20">
-        <div className="max-w-[820px] mx-auto px-8">
-          <SectionHeading title="Admission Timeline 2024/2025" />
-          <div className="relative">
-            {/* Center vertical line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[5px] bg-[#26308f]" />
-            <div className="flex flex-col gap-8">
-              {[
-                { month: "March 2024", event: "JAMB UTME Registration begins", side: "left" },
-                { month: "April 2024", event: "JAMB UTME Examination", side: "right" },
-                { month: "May 2024", event: "Release of JAMB Results & Post-UTME Registration begins", side: "left" },
-                { month: "June - July 2024", event: "Post-UTME Screening Exercise", side: "right" },
-                { month: "August 2024", event: "First Batch Admission List Released", side: "left" },
-                { month: "September 2024", event: "Registration and Clearance for New Students", side: "right" },
-                { month: "October 2024", event: "Orientation & Commencement of Lectures", side: "left" },
-              ].map((item, i) => (
-                <div key={i} className="relative flex items-center">
-                  {/* LEFT slot */}
-                   <div className="w-1/2 pr-12 flex justify-end">
-                  {item.side === "left" ? (
-                    <div className="relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]">
-                      <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.month}</h3>
-                      <p className="text-[16px] font-normal text-[#333333] leading-6">{item.event}</p>
-                      {/* Arrow on right edge of card pointing right → toward line */}
-                      <div className="absolute top-[22px] -right-[8px]
-                        w-0 h-0
-                        border-t-[8px] border-t-transparent
-                        border-b-[8px] border-b-transparent
-                        border-l-[8px] border-l-[#26308f]" />
-                    </div>
-                  ) : (
-                    <div className="w-full max-w-[340px]" />
-                  )}
-                </div>
+      {/* ━━━ ADMISSION TIMELINE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+<section className="w-full bg-white py-20">
+  <div className="max-w-[820px] mx-auto px-4 md:px-8">
+    <SectionHeading title="Admission Timeline 2024/2025" />
+    <div className="relative">
 
-                  {/* Center dot */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-[18px] z-10">
-                  <div className="w-5 h-5 rounded-full border-3 border-[#1e2a78] bg-[#eef0ff]" />
-                </div>
+      {/* Vertical line — left on mobile, center on desktop */}
+      <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[5px] bg-[#26308f]" />
 
-                  {/* RIGHT slot */}
-                   <div className="w-1/2 pl-12 flex justify-start">
-                  {item.side === "right" ? (
-                    <div className="relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]">
-                      <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.month}</h3>
-                      <p className="text-[16px] font-normal text-[#333333] leading-6">{item.event}</p>
-                      {/* Arrow on left edge of card pointing left ← toward line */}
-                      <div className="absolute top-[22px] -left-[8px]
-                        w-0 h-0
-                        border-t-[8px] border-t-transparent
-                        border-b-[8px] border-b-transparent
-                        border-r-[8px] border-r-[#26308f]" />
-                    </div>
-                  ) : (
-                    <div className="w-full max-w-[340px]" />
-                  )}
+      <div className="flex flex-col gap-8">
+        {[
+          { month: "March 2024", event: "JAMB UTME Registration begins", side: "left" },
+          { month: "April 2024", event: "JAMB UTME Examination", side: "right" },
+          { month: "May 2024", event: "Release of JAMB Results & Post-UTME Registration begins", side: "left" },
+          { month: "June - July 2024", event: "Post-UTME Screening Exercise", side: "right" },
+          { month: "August 2024", event: "First Batch Admission List Released", side: "left" },
+          { month: "September 2024", event: "Registration and Clearance for New Students", side: "right" },
+          { month: "October 2024", event: "Orientation & Commencement of Lectures", side: "left" },
+        ].map((item, i) => (
+          <div key={i} className="relative flex items-center">
+
+            {/* LEFT slot — hidden on mobile */}
+            <div className="hidden md:flex w-1/2 pr-12 justify-end">
+              {item.side === "left" ? (
+                <div className="relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]">
+                  <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.month}</h3>
+                  <p className="text-[16px] font-normal text-[#333333] leading-6">{item.event}</p>
+                  <div className="absolute top-[22px] -right-[8px] w-0 h-0
+                    border-t-[8px] border-t-transparent
+                    border-b-[8px] border-b-transparent
+                    border-l-[8px] border-l-[#26308f]" />
                 </div>
-                </div>
-              ))}
+              ) : (
+                <div className="w-full max-w-[340px]" />
+              )}
             </div>
-          </div>
-        </div>
-      </section>
 
+            {/* Dot — left on mobile, center on desktop */}
+            <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 top-[18px] z-10">
+              <div className="w-5 h-5 rounded-full border-[3px] border-[#1e2a78] bg-white" />
+            </div>
+
+            {/* RIGHT slot — full width on mobile, half on desktop */}
+            <div className="w-full pl-12 md:w-1/2 md:pl-12 flex justify-start">
+              <div className={`${item.side === "right" ? "block" : "block md:hidden"} relative bg-white rounded-md shadow-sm p-6 w-full max-w-[520px]`}>
+                <h3 className="text-[28px] font-semibold text-[#333333] mb-2">{item.month}</h3>
+                <p className="text-[16px] font-normal text-[#333333] leading-6">{item.event}</p>
+                <div className="absolute top-[22px] -left-[8px] w-0 h-0
+                  border-t-[8px] border-t-transparent
+                  border-b-[8px] border-b-transparent
+                  border-r-[8px] border-r-[#26308f]" />
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
       {/* ━━━ FAQ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           Section bg: #eef0ff lavender
           First item open (navy header + white body)
           Rest closed (white header)
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="w-full bg-[#eef0ff] py-20">
-        <div className="max-w-[1120px] 2xl:max-w-[1300px] mx-auto px-8">
+        <div className="max-w-full 2xl:max-w-[1300px] mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Frequently Asked Questions" />
           <div className="flex flex-col rounded-xl  overflow-hidden shadow-sm">
             <FaqGroup items={[
@@ -528,7 +520,7 @@ export default function AdmissionsPage() {
           Right card: help info with bullet list + blue CTA button
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="w-full bg-white py-20">
-        <div className="max-w-[1100px] 2xl:max-w-[1300px] mx-auto px-8">
+        <div className="max-w-full 2xl:max-w-[1300px] mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Admissions Office" />
           <div className="grid md:grid-cols-2 gap-8">
 
@@ -598,9 +590,9 @@ export default function AdmissionsPage() {
           bg: #26308f navy (exact from pixel)
           4 columns, large bold numbers, small label below
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-       <section className="w-full min-h-[345px] bg-[#26308f] flex justify items-center text-center ">
+       <section className="w-full min-h-[345px] bg-[#26308f] py-10 flex justify items-center text-center ">
         <div className="max-w-[1100px] mx-auto px-8 ">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
             {[
               { value: "150+", label: "JAMB Cut-off Mark" },
               { value: "5", label: "Academic Programs" },

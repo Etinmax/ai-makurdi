@@ -68,16 +68,30 @@ const academicServices = [
 ];
 
 const learningSupport = [
-  { icon: <BookOpen size={36} fill="#1e2a78" strokeWidth={0} />, title: "Library Services", desc: "Comprehensive library services including book lending, reference assistance, research support, and study spaces.", items: ["Extensive collection of philosophy texts", "Digital resources and online databases", "Interlibrary loan services", "Research consultation with librarians"], link: "#", label: "Library Portal" },
-  { icon: <Globe size={36} fill="#1e2a78" strokeWidth={0} />, title: "General Studies (GST)", desc: "Interdisciplinary courses designed to provide students with a broad educational foundation and essential skills.", items: ["Use of English and Communication Skills", "Nigerian Peoples and Culture", "Entrepreneurship Studies", "Introduction to Computer Science"], link: "#", label: "GST Courses" },
-  { icon: <GraduationCap size={36} fill="#1e2a78" strokeWidth={0} />, title: "Academic Advising", desc: "Personalized academic guidance and mentoring to help students navigate their educational journey successfully.", items: ["Course selection and registration assistance", "Academic progress monitoring", "Career guidance and planning", "Graduate school preparation"], link: "#", label: "Meet Advisors" },
-  { icon: <Monitor size={36} fill="#1e2a78" strokeWidth={0} />, title: "ICT & E-Learning Support", desc: "Comprehensive technology support services to enhance teaching, learning, and research activities.", items: ["Learning Management System (LMS)", "Computer laboratories and Wi-Fi access", "Technical support and troubleshooting", "Digital literacy training"], link: "#", label: "IT Services" },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width={42} height={42} fill="#1e2a78">
+  <path d="M320 216C368.6 216 408 176.6 408 128C408 79.4 368.6 40 320 40C271.4 40 232 79.4 232 128C232 176.6 271.4 216 320 216zM320 514.7L320 365.4C336.3 358.6 352.9 351.7 369.7 344.7C408.7 328.5 450.5 320.1 492.8 320.1L512 320.1L512 480.1L492.8 480.1C433.7 480.1 375.1 491.8 320.5 514.6L320 514.8zM320 296L294.9 285.5C248.1 266 197.9 256 147.2 256L112 256C85.5 256 64 277.5 64 304L64 496C64 522.5 85.5 544 112 544L147.2 544C197.9 544 248.1 554 294.9 573.5L307.7 578.8C315.6 582.1 324.4 582.1 332.3 578.8L345.1 573.5C391.9 554 442.1 544 492.8 544L528 544C554.5 544 576 522.5 576 496L576 304C576 277.5 554.5 256 528 256L492.8 256C442.1 256 391.9 266 345.1 285.5L320 296z"/>
+</svg>, title: "Library Services", desc: "Comprehensive library services including book lending, reference assistance, research support, and study spaces.", items: ["Extensive collection of philosophy texts", "Digital resources and online databases", "Interlibrary loan services", "Research consultation with librarians"], link: "#", label: "Library Portal" },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width={60} height={60} fill="#1e2a78">
+  <path d="M415.9 344L225 344C227.9 408.5 242.2 467.9 262.5 511.4C273.9 535.9 286.2 553.2 297.6 563.8C308.8 574.3 316.5 576 320.5 576C324.5 576 332.2 574.3 343.4 563.8C354.8 553.2 367.1 535.8 378.5 511.4C398.8 467.9 413.1 408.5 416 344zM224.9 296L415.8 296C413 231.5 398.7 172.1 378.4 128.6C367 104.2 354.7 86.8 343.3 76.2C332.1 65.7 324.4 64 320.4 64C316.4 64 308.7 65.7 297.5 76.2C286.1 86.8 273.8 104.2 262.4 128.6C242.1 172.1 227.8 231.5 224.9 296zM176.9 296C180.4 210.4 202.5 130.9 234.8 78.7C142.7 111.3 74.9 195.2 65.5 296L176.9 296zM65.5 344C74.9 444.8 142.7 528.7 234.8 561.3C202.5 509.1 180.4 429.6 176.9 344L65.5 344zM463.9 344C460.4 429.6 438.3 509.1 406 561.3C498.1 528.6 565.9 444.8 575.3 344L463.9 344zM575.3 296C565.9 195.2 498.1 111.3 406 78.7C438.3 130.9 460.4 210.4 463.9 296L575.3 296z"/>
+</svg>, title: "General Studies (GST)", desc: "Interdisciplinary courses designed to provide students with a broad educational foundation and essential skills.", items: ["Use of English and Communication Skills", "Nigerian Peoples and Culture", "Entrepreneurship Studies", "Introduction to Computer Science"], link: "#", label: "GST Courses" },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width={42} height={42} fill="#1e2a78">
+  <path d="M337.3 51C325.9 48.7 314.2 48.7 302.8 51L115.3 88.5C104.1 90.7 96 100.6 96 112C96 122.3 102.5 131.3 112 134.6L112 208L96.3 286.6C96.1 287.5 96 288.5 96 289.5C96 297.5 102.5 304.1 110.6 304.1L145.5 304.1C153.5 304.1 160.1 297.6 160.1 289.5C160.1 288.5 160 287.6 159.8 286.6L144 208L144 141.3L192 150.9L192 208C192 278.7 249.3 336 320 336C390.7 336 448 278.7 448 208L448 150.9L524.7 135.6C535.9 133.3 544 123.4 544 112C544 100.6 535.9 90.7 524.7 88.5L337.3 51zM320 288C275.8 288 240 252.2 240 208L400 208C400 252.2 364.2 288 320 288zM216.1 384.1C154.7 412.3 112 474.3 112 546.3C112 562.7 125.3 576 141.7 576L296 576L296 430L238.6 387C232.1 382.1 223.4 380.8 216 384.2zM344 576L498.3 576C514.7 576 528 562.7 528 546.3C528 474.3 485.3 412.3 423.9 384.2C416.5 380.8 407.8 382.1 401.3 387L343.9 430L343.9 576z"/>
+</svg>, title: "Academic Advising", desc: "Personalized academic guidance and mentoring to help students navigate their educational journey successfully.", items: ["Course selection and registration assistance", "Academic progress monitoring", "Career guidance and planning", "Graduate school preparation"], link: "#", label: "Meet Advisors" },
+  { icon:           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width={42} height={42} fill="#1e2a78">
+  <path d="M64 160C64 124.7 92.7 96 128 96L512 96C547.3 96 576 124.7 576 160L576 400L512 400L512 160L128 160L128 400L64 400L64 160zM0 467.2C0 456.6 8.6 448 19.2 448L620.8 448C631.4 448 640 456.6 640 467.2C640 509.6 605.6 544 563.2 544L76.8 544C34.4 544 0 509.6 0 467.2zM281 273L250 304L281 335C290.4 344.4 290.4 359.6 281 368.9C271.6 378.2 256.4 378.3 247.1 368.9L199.1 320.9C189.7 311.5 189.7 296.3 199.1 287L247.1 239C256.5 229.6 271.7 229.6 281 239C290.3 248.4 290.4 263.6 281 272.9zM393 239L441 287C450.4 296.4 450.4 311.6 441 320.9L393 368.9C383.6 378.3 368.4 378.3 359.1 368.9C349.8 359.5 349.7 344.3 359.1 335L390.1 304L359.1 273C349.7 263.6 349.7 248.4 359.1 239.1C368.5 229.7 383.7 229.7 393 239.1z"/>
+</svg>, title: "ICT & E-Learning Support", desc: "Comprehensive technology support services to enhance teaching, learning, and research activities.", items: ["Learning Management System (LMS)", "Computer laboratories and Wi-Fi access", "Technical support and troubleshooting", "Digital literacy training"], link: "#", label: "IT Services" },
 ];
 
 const alumniCards = [
-  { icon: <Users size={40} fill="#1e2a78" strokeWidth={0} />, title: "Alumni Association", desc: "Join our vibrant alumni community to stay connected, network, and contribute to the growth of the Institute.", link: "#", label: "Join Association" },
-  { icon: <UserPlus size={40} fill="#1e2a78" strokeWidth={0} />, title: "Alumni Registration", desc: "Register as an alumnus to receive updates, invitations to events, and access to alumni benefits.", link: "#", label: "Register Now" },
-  { icon: <Trophy size={40} fill="#1e2a78" strokeWidth={0} />, title: "Success Stories", desc: "Read inspiring stories of our alumni who are making significant contributions in various fields.", link: "#", label: "View Stories" },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="55" height="55" fill="#1e2a78">
+        <path d="M300.9 117.2L184.3 246.8C179.7 251.9 179.9 259.8 184.8 264.7C215.3 295.2 264.8 295.2 295.3 264.7L327.1 232.9C331.3 228.7 336.6 226.4 342 226C348.8 225.4 355.8 227.7 361 232.9L537.6 408L608 352L608 64L496 128L472.2 112.1C456.4 101.6 437.9 96 418.9 96L348.5 96C347.4 96 346.2 96 345.1 96.1C328.2 97 312.3 104.6 300.9 117.2zM148.6 214.7L255.4 96L215.8 96C190.3 96 165.9 106.1 147.9 124.1L32 256L32 608L176 472L188.4 482.3C211.4 501.5 240.4 512 270.3 512L286 512L279 505C269.6 495.6 269.6 480.4 279 471.1C288.4 461.8 303.6 461.7 312.9 471.1L353.9 512.1L362.9 512.1C382 512.1 400.7 507.8 417.7 499.8L391 473C381.6 463.6 381.6 448.4 391 439.1C400.4 429.8 415.6 429.7 424.9 439.1L456.9 471.1L474.4 453.6C483.3 444.7 485.9 431.8 482 420.5L344.1 283.7L329.2 298.6C279.9 347.9 200.1 347.9 150.8 298.6C127.8 275.6 126.9 238.7 148.6 214.6z"/>
+      </svg>, title: "Alumni Association", desc: "Join our vibrant alumni community to stay connected, network, and contribute to the growth of the Institute.", link: "#", label: "Join Association" },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width={55} height={55} fill="#1e2a78">
+  <path d="M285.7 368C384.2 368 464 447.8 464 546.3C464 562.7 450.7 576 434.3 576L77.7 576C61.3 576 48 562.7 48 546.3C48 447.8 127.8 368 226.3 368L285.7 368zM528 144C541.3 144 552 154.7 552 168L552 216L600 216C613.3 216 624 226.7 624 240C624 253.3 613.3 264 600 264L552 264L552 312C552 325.3 541.3 336 528 336C514.7 336 504 325.3 504 312L504 264L456 264C442.7 264 432 253.3 432 240C432 226.7 442.7 216 456 216L504 216L504 168C504 154.7 514.7 144 528 144zM256 312C189.7 312 136 258.3 136 192C136 125.7 189.7 72 256 72C322.3 72 376 125.7 376 192C376 258.3 322.3 312 256 312z"/>
+</svg>, title: "Alumni Registration", desc: "Register as an alumnus to receive updates, invitations to events, and access to alumni benefits.", link: "#", label: "Register Now" },
+  { icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="55" height="55" fill="#1e2a78">
+        <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
+      </svg>, title: "Success Stories", desc: "Read inspiring stories of our alumni who are making significant contributions in various fields.", link: "#", label: "View Stories" },
 ];
 
 const notableAlumni = [
@@ -151,7 +165,7 @@ export default function AcademicsPage() {
 
       {/* ── DEPARTMENT OF PHILOSOPHY ─────────────────────────────────────── */}
       <section id="department" className="w-full bg-[#eef0ff] py-20">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Department of Philosophy" />
           <div className="bg-white rounded-2xl shadow-sm px-12 py-12">
             <div className="flex justify-center mb-5">
@@ -159,8 +173,8 @@ export default function AcademicsPage() {
                 <path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/>
               </svg>
             </div>
-            <h3 className="text-[22px] font-bold text-gray-900 text-center mb-7">Department Overview</h3>
-            <div className="text-[15px] text-gray-600 leading-7 space-y-4 mb-10">
+            <h3 className="text-[28px] font-[700] text-gray-900 text-center mb-7">Department Overview</h3>
+            <div className="text-[16px] text-[#333333] font-[400] leading-7 space-y-4 mb-10">
               <p>The Department of Philosophy at Augustinian Institute is dedicated to the pursuit of wisdom, truth, and understanding through rigorous intellectual inquiry. Our programs are designed to develop critical thinking, ethical reasoning, and a deep appreciation for the philosophical traditions that have shaped human thought.</p>
               <p>Our faculty consists of distinguished scholars and practitioners who are committed to providing students with a comprehensive philosophical education that integrates theoretical knowledge with practical application.</p>
             </div>
@@ -222,15 +236,15 @@ export default function AcademicsPage() {
 
       {/* ── ACADEMIC RESOURCES — white bg, #eef0ff cards, centered, 3+2 grid ── */}
       <section className="w-full bg-white py-20">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Academic Resources" />
           {/* Row 1: 3 cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
             {academicResources.slice(0, 3).map((r, i) => (
               <div key={i} className="bg-[#eef0ff] rounded-2xl px-8 py-10 flex flex-col items-center text-center">
                 <div className="mb-4">{r.icon}</div>
-                <h4 className="text-[17px] font-bold text-gray-900 mb-3">{r.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-6 flex-1">{r.desc}</p>
+                <h4 className="text-[28px] font-[700] text-gray-900 mb-3">{r.title}</h4>
+                <p className="text-[16px] text-[#333333] font-[400] leading-6 flex-1">{r.desc}</p>
                 <BlueBtn href={r.link} label={r.label} />
               </div>
             ))}
@@ -240,8 +254,8 @@ export default function AcademicsPage() {
             {academicResources.slice(3).map((r, i) => (
               <div key={i} className="bg-[#eef0ff] rounded-2xl px-8 py-10 flex flex-col items-center text-center">
                 <div className="mb-4">{r.icon}</div>
-                <h4 className="text-[17px] font-bold text-gray-900 mb-3">{r.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-6 flex-1">{r.desc}</p>
+               <h4 className="text-[28px] font-[700] text-gray-900 mb-3">{r.title}</h4>
+                <p className="text-[16px] text-[#333333] font-[400] leading-6 flex-1">{r.desc}</p>
                 <BlueBtn href={r.link} label={r.label} />
               </div>
             ))}
@@ -251,17 +265,17 @@ export default function AcademicsPage() {
 
       {/* ── RESEARCH AND SCHOLARSHIP — #eef0ff bg, white cards, icon+title left ── */}
       <section className="w-full bg-[#eef0ff] py-20">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Research and Scholarship" />
           <div className="grid sm:grid-cols-2 gap-6">
             {researchItems.map((r, i) => (
               <div key={i} className="bg-white rounded-2xl shadow-sm p-8 flex flex-col">
                 <div className="mb-3">{r.icon}</div>
-                <h4 className="text-[18px] font-bold text-gray-900 mb-2">{r.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-6 mb-4">{r.desc}</p>
-                <ul className="flex flex-col gap-1 mb-2 list-disc list-inside">
+            <h4 className="text-[28px] font-[700] text-gray-900 mb-3">{r.title}</h4>
+                <p className="text-[16px] text-[#333333] font-[400] leading-6 flex-1">{r.desc}</p>
+                <ul className="flex flex-col gap-1 mt-3 mb-2 list-disc list-inside">
                   {r.items.map((item, j) => (
-                    <li key={j} className="text-[14px] text-gray-600">{item}</li>
+                    <li key={j} className="text-[16px]  text-[#333333] font-[400]">{item}</li>
                   ))}
                 </ul>
                 <div className="mt-auto"><BlueBtn href={r.link} label={r.label} /></div>
@@ -273,14 +287,14 @@ export default function AcademicsPage() {
 
       {/* ── ACADEMIC SERVICES — white bg, #eef0ff cards, centered ── */}
       <section className="w-full bg-white py-20">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Academic Services" />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {academicServices.map((s, i) => (
               <div key={i} className="bg-[#eef0ff] rounded-2xl px-8 py-10 flex flex-col items-center text-center">
                 <div className="mb-4">{s.icon}</div>
-                <h4 className="text-[17px] font-bold text-gray-900 mb-3">{s.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-6 flex-1">{s.desc}</p>
+              <h4 className="text-[28px] font-[700] text-gray-900 mb-3">{s.title}</h4>
+                <p className="text-[16px] text-[#333333] font-[400] leading-6 flex-1">{s.desc}</p>
                 <BlueBtn href={s.link} label={s.label} />
               </div>
             ))}
@@ -290,17 +304,17 @@ export default function AcademicsPage() {
 
       {/* ── LEARNING SUPPORT — #eef0ff bg, white cards, icon+title left ── */}
       <section className="w-full bg-[#eef0ff] py-20">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Learning Support" />
           <div className="grid sm:grid-cols-2 gap-6">
             {learningSupport.map((l, i) => (
               <div key={i} className="bg-white rounded-2xl shadow-sm p-8 flex flex-col">
                 <div className="mb-3">{l.icon}</div>
-                <h4 className="text-[18px] font-bold text-gray-900 mb-2">{l.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-6 mb-4">{l.desc}</p>
-                <ul className="flex flex-col gap-1 mb-2 list-disc list-inside">
+                <h4 className="text-[28px] font-[700] text-gray-900 mb-3">{l.title}</h4>
+                <p className="text-[16px] text-[#333333] font-[400] leading-6 flex-1">{l.desc}</p>
+                <ul className="flex flex-col gap-1 mt-3 mb-2 list-disc list-inside">
                   {l.items.map((item, j) => (
-                    <li key={j} className="text-[14px] text-gray-600">{item}</li>
+                    <li key={j} className="text-[16px] text-[#333333] font-[400]">{item}</li>
                   ))}
                 </ul>
                 <div className="mt-auto"><BlueBtn href={l.link} label={l.label} /></div>
@@ -312,7 +326,7 @@ export default function AcademicsPage() {
 
       {/* ── ALUMNI NETWORK — white bg, #eef0ff cards centered, blue Notable header ── */}
       <section className="w-full bg-white py-20">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Alumni Network" />
 
           {/* 3 action cards */}
@@ -320,8 +334,8 @@ export default function AcademicsPage() {
             {alumniCards.map((a, i) => (
               <div key={i} className="bg-[#eef0ff] rounded-2xl px-8 py-10 flex flex-col items-center text-center">
                 <div className="mb-4">{a.icon}</div>
-                <h4 className="text-[17px] font-bold text-gray-900 mb-3">{a.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-6 flex-1">{a.desc}</p>
+                <h4 className="text-[28px] font-[700] text-gray-900 mb-3">{a.title}</h4>
+                <p className="text-[16px] text-[#333333] font-[400] leading-6 flex-1">{a.desc}</p>
                 <BlueBtn href={a.link} label={a.label} />
               </div>
             ))}

@@ -30,7 +30,7 @@ export default function UpcomingEvents() {
 
   return (
     <section className="w-full bg-white py-20">
-      <div className="max-w-full mx-auto px-[75px]">
+      <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-2xl md:text-3xl font-semibold text-[#24347a]">

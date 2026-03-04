@@ -13,13 +13,13 @@ const academicsDropdown = [
 ];
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Academics", href: "/academics", dropdown: academicsDropdown },
-  { label: "E-Journal", href: "https://acjol.org/index.php/tollelege/issue/view/605" },
-  { label: "Admissions", href: "/admissions" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Home", href: "/", external: false },
+  { label: "About", href: "/about", external: false },
+  { label: "Academics", href: "/academics", dropdown: academicsDropdown, external: false },
+  { label: "E-Journal", href: "https://acjol.org/index.php/tollelege/issue/view/605", external: false },
+  { label: "Admissions", href: "/admissions", external: false },
+  { label: "Gallery", href: "/gallery", external: false },
+  { label: "Contact Us", href: "/contact", external: false },
 ];
 
 const helvetica = { fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" };
@@ -47,6 +47,12 @@ export default function Header() {
     setActiveIndex(null);
   }, [pathname]);
 
+  // Helper: only open in new tab if explicitly external: true
+  const getTarget = (link: { external?: boolean }) =>
+    link.external === true ? "_blank" : undefined;
+  const getRel = (link: { external?: boolean }) =>
+    link.external === true ? "noopener noreferrer" : undefined;
+
   return (
     <div className="w-full">
 
@@ -73,7 +79,7 @@ export default function Header() {
           <div className="bg-white px-2 py-2 rounded-md shadow-md self-start">
             <img src="/ailogo.png" alt="logo" className="w-[60px] h-[68px] object-contain" />
           </div>
-          <h2 className="text-[30px] font-[800] leading-tight text-center" style={helvetica}>
+          <h2 className="md:text-[30px] text-[29px] md:font-[800] font-[750] leading-tight text-center" style={helvetica}>
             AUGUSTINIAN INSTITUTE, MAKURDI
           </h2>
           <p className="text-[13px] opacity-90 leading-snug text-center">
@@ -98,9 +104,10 @@ export default function Header() {
                     className="flex items-center gap-1 px-3 py-4 hover:bg-white/10 transition-colors cursor-pointer"
                   >
                     {link.label}
-                    <ChevronDown size={13} className={`transition-transform duration-200 ${academicsOpen ? "rotate-180" : ""}`} />
                   </button>
-                  {/* Underline with side padding */}
+                  {/* Short underline — always visible by default */}
+                  <span className="absolute bottom-0 left-3 w-4 h-[3px] bg-white group-hover:opacity-0 transition-opacity duration-150" />
+                  {/* Full underline — appears on hover */}
                   <span className="absolute bottom-0 left-3 right-3 h-[3px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                   {academicsOpen && (
                     <div className="absolute top-full left-0 z-50 bg-white text-gray-800 rounded-md shadow-xl min-w-[240px] py-1 mt-0">
@@ -118,13 +125,12 @@ export default function Header() {
                 <li key={i} className="group relative">
                   <Link
                     href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    target={getTarget(link)}
+                    rel={getRel(link)}
                     className="block px-3 py-4 hover:bg-white/10 transition-colors"
                   >
                     {link.label}
                   </Link>
-                  {/* Underline with side padding */}
                   <span className="absolute bottom-0 left-3 right-3 h-[3px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                 </li>
               )
@@ -135,7 +141,7 @@ export default function Header() {
               E-Library
             </Link>
             <Link href="https://webmail.aimakurdi.ng" target="_blank" rel="noopener noreferrer"
-              className="border-2 border-[#0653ac] bg-[#19246f] text-[#134da6] hover:bg-white/10 transition px-5 py-2 rounded-md cursor-pointer">
+              className="border-2 border-[#0653ac] bg-[#19246f] text-[#134da6] hover:bg-white transition px-5 py-2 rounded-md cursor-pointer">
               Emails
             </Link>
           </div>
@@ -157,68 +163,74 @@ export default function Header() {
       </div>
 
       {/* ── MOBILE MENU ─────────────────────────────────────────────── */}
-      {mobileOpen && (
-        <div className="md:hidden w-full bg-[#1a236e] text-white flex flex-col">
-          {navLinks.map((link, i) => {
-            const clicked = activeIndex === i;
-            return link.dropdown ? (
-              <div key={i} className="relative">
-                <button
+{mobileOpen && (
+  <div className="md:hidden w-full bg-[#1a236e] text-white flex flex-col">
+    {navLinks.map((link, i) => {
+      const clicked = activeIndex === i;
+      return link.dropdown ? (
+        <div key={i} className="relative">
+          <button
+            onClick={() => {
+              setMobileAcademicsOpen(!mobileAcademicsOpen);
+              setActiveIndex(i);
+            }}
+            className={`w-full text-left px-6 py-4 text-[17px] font-medium transition-colors
+              ${mobileAcademicsOpen ? "bg-[#30397c]" : "hover:bg-[#30397c]"}`}
+          >
+            {link.label}
+          </button>
+          <span
+            className="absolute bottom-0 left-6 h-[3px] bg-white transition-all duration-300"
+            style={{ width: mobileAcademicsOpen ? "calc(100% - 48px)" : "2rem" }}
+          />
+          {mobileAcademicsOpen && (
+            <div className="bg-[#151d5e] flex flex-col">
+              {link.dropdown.map((item, j) => (
+                <Link key={j} href={item.href}
                   onClick={() => {
-                    setMobileAcademicsOpen(!mobileAcademicsOpen);
-                    setActiveIndex(i);
+                    setMobileOpen(false);
+                    setMobileAcademicsOpen(false);
+                    setActiveIndex(null);
                   }}
-                  className={`w-full text-left px-6 py-4 text-[17px] font-medium transition-colors
-                    ${mobileAcademicsOpen ? "bg-[#30397c]" : "hover:bg-[#30397c]"}`}
-                >
-                  {link.label}
-                </button>
-                {/* Short underline always visible, full when open */}
-                <span
-                  className="absolute bottom-0 left-6 h-[3px] bg-white transition-all duration-300"
-                  style={{ width: mobileAcademicsOpen ? "calc(100% - 48px)" : "2rem" }}
-                />
-                {mobileAcademicsOpen && (
-                  <div className="bg-[#151d5e] flex flex-col">
-                    {link.dropdown.map((item, j) => (
-                      <Link key={j} href={item.href}
-                        onClick={() => { setMobileOpen(false); setMobileAcademicsOpen(false); setActiveIndex(null); }}
-                        className="pl-10 pr-6 py-3 text-[15px] text-white/75 hover:text-white border-b border-white/5 transition-colors">
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div key={i} className="relative">
-                <Link
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  onClick={() => { setActiveIndex(i); setMobileOpen(false); }}
-                  className={`block px-6 py-4 text-[17px] font-medium transition-colors
-                    ${clicked ? "bg-[#30397c]" : "hover:bg-[#30397c]"}`}
-                >
-                  {link.label}
+                  className="pl-10 pr-6 py-3 text-[15px] text-white/75 hover:text-white border-b border-white/5 transition-colors">
+                  {item.label}
                 </Link>
-                {/* Underline with side padding — only on clicked */}
-                {clicked && <span className="absolute bottom-0 left-6 right-6 h-[3px] bg-white" />}
-              </div>
-            );
-          })}
-
-          <div className="flex gap-3 px-6 py-5">
-            <Link href="#" className="bg-[#0056b3] px-5 py-2 rounded-md font-medium shadow text-[15px]">
-              E-Library
-            </Link>
-            <Link href="https://webmail.aimakurdi.ng" target="_blank" rel="noopener noreferrer"
-              className="border-2 border-[#0653ac] bg-[#19246f] text-[#134da6] px-5 py-2 rounded-md text-[15px]">
-              Emails
-            </Link>
-          </div>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      ) : (
+        <div key={i} className="relative">
+          <Link
+            href={link.href}
+            target={getTarget(link)}
+            rel={getRel(link)}
+            onClick={() => {
+              setActiveIndex(i);
+              // Delay close so highlight is visible before menu unmounts
+              setTimeout(() => setMobileOpen(false), 300);
+            }}
+            className={`block px-6 py-4 text-[17px] font-medium transition-colors
+              ${clicked ? "bg-[#30397c]" : "hover:bg-[#30397c]"}`}
+          >
+            {link.label}
+          </Link>
+          {clicked && <span className="absolute bottom-0 left-6 right-6 h-[3px] bg-white" />}
+        </div>
+      );
+    })}
+
+    <div className="flex gap-3 px-6 py-5">
+      <Link href="#" className="bg-[#0056b3] px-5 py-2 rounded-md font-medium shadow text-[15px]">
+        E-Library
+      </Link>
+      <Link href="https://webmail.aimakurdi.ng" target="_blank" rel="noopener noreferrer"
+        className="border-2 border-[#0653ac] bg-[#19246f] text-[#134da6] px-5 py-2 rounded-md text-[15px]">
+        Emails
+      </Link>
+    </div>
+  </div>
+)}
 
     </div>
   );

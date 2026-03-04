@@ -40,7 +40,7 @@ const programs = [
 export default function AcademicPrograms() {
   return (
     <section className="w-full bg-white py-20">
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
 
         {/* Heading */}
         <div className="text-center mb-14">
@@ -49,7 +49,7 @@ export default function AcademicPrograms() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols md:grid-cols-4 gap-6">
           {programs.map((program, i) => (
             <div
               key={i}

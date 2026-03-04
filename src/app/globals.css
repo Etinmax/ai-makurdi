@@ -1,35 +1,14 @@
 @import "tailwindcss";
 
-/* ------------------ */
-/* THEME TOKENS */
-/* ------------------ */
-
-@theme {
-  --color-primary: #6c4e9d;
-  --color-accent: #fdb9a0;
-  --color-soft: #fef5f5;
-
-  --font-main: "poppins", sans-serif;
-}
-
-/* ------------------ */
-/* GLOBAL STYLES */
-/* ------------------ */
-
-body {
-  font-family: var(--font-main);
-  background: white;
-  color: #1f2937;
-}
-body {
-  font-family: var(--font-body), Helvetica, Arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), Helvetica, Arial, sans-serif;
-}
-
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }

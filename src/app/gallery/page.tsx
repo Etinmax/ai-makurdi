@@ -216,13 +216,13 @@ export default function GalleryPage() {
 
   <div className="relative z-10 max-w-2xl mx-auto px-8">
     <h1
-      className="text-[40px] font-bold mb-3"
+      className="text-[30px] md:text-[40px] font-bold mb-3"
       style={{ animation: "slideUp 1.5s ease-out 0.1s forwards", opacity: 0 }}
     >
       Institute Gallery
     </h1>
     <p
-      className="text-[19.2px] text-white leading-relaxed"
+      className="text-[15.2px] md:text-[19.2px] text-white leading-relaxed"
       style={{ animation: "slideUp 1.5s ease-out 0.2s forwards", opacity: 0 }}
     >
       Explore our Institute, events, academic activities, and community<br />
@@ -232,11 +232,11 @@ export default function GalleryPage() {
 </div>
       {/* ── PHOTO GALLERY ───────────────────────────────────────────────── */}
       <section className="w-full bg-[#eef0ff] py-16">
-        <div className="max-w-[1200px]  mx-auto px-8">
+        <div className="max-w-full  mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Photo Gallery" />
 
           {/* Filter buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="flex md:flex-wrap flex-col md:flex-row  md:justify-center gap-2 md:gap-3 mb-10">
             {filters.map((f) => (
               <button
                 key={f}

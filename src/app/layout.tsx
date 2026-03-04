@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Open_Sans,Poppins } from "next/font/google";
+import "@fontsource/poppins/400.css"
+import "@fontsource/poppins/600.css"
+import "@fontsource/poppins/700.css"
+import "@fontsource/poppins/800.css"
+import "@fontsource/open-sans/400.css"
+import "@fontsource/open-sans/600.css"
 
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
-  preload: false,
-});
 export const metadata = {
   title: "Business Website",
   description: "Modern one-page business website",
@@ -21,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${openSans.variable} ${poppins.variable} bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100`}>
+      <body className={` bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100`}>
         {children}
       </body>
     </html>

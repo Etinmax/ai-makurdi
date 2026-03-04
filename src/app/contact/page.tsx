@@ -109,14 +109,14 @@ export default function ContactPage() {
       {/* Content */}
 <div className="relative z-10 max-w-[800px] px-6">
   <h1
-    className="text-[40px] font-bold leading-normal tracking-wide"
+    className="text-[30px] md:text-[40px] font-bold leading-normal tracking-wide"
     style={{ animation: "slideUp 1.5s ease-out 0.3s forwards", opacity: 0 }}
   >
     Get In Touch With Us
   </h1>
 
   <p
-    className="mt-4 text-[19.2px] font-[400]"
+    className="mt-4 text-[15.2px] md:text-[19.2px] font-[400]"
     style={{ animation: "slideUp 1.5s ease-out 0.3s forwards", opacity: 0 }}
   >
     We're here to answer your questions and help you with any information you need
@@ -126,7 +126,7 @@ export default function ContactPage() {
 
       {/* ── CONTACT INFORMATION ───────────────────────────────────────────── */}
       <section className="w-full bg-[#eef0ff] py-16">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Contact Information" />
 
           {/* Row 1: 3 cards */}
@@ -288,7 +288,7 @@ export default function ContactPage() {
 
       {/* ── SEND US A MESSAGE ─────────────────────────────────────────────── */}
       <section className="bg-white w-full  py-16">
-        <div className="max-w-[925px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Send Us a Message" />
 
           <div className=" bg-[#eef0ff] rounded-xl shadow-sm p-8">
@@ -351,7 +351,7 @@ export default function ContactPage() {
 
       {/* ── DEPARTMENT CONTACTS ───────────────────────────────────────────── */}
       <section className="w-full bg-[#eef0ff] py-16">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Department Contacts" />
           <div className="grid  md:grid-cols-3 gap-6">
             {[
@@ -435,7 +435,7 @@ export default function ContactPage() {
 
       {/* ── FIND US / MAP ─────────────────────────────────────────────────── */}
       <section className="w-full bg-[#eef0ff] py-16">
-        <div className="max-w-[1100px] mx-auto px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px]">
           <SectionHeading title="Find Us" />
 
           {/* Google Maps embed */}
@@ -479,7 +479,7 @@ export default function ContactPage() {
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
       <section className="w-full bg-[#eef0ff] py-16">
-        <div className="max-w-[1120px] mx-auto px-8 ">
+        <div className="max-w-full mx-auto px-4 sm:px-8 md:px-[75px] ">
           <SectionHeading title="Frequently Asked Questions" />
           <FaqGroup items={[
             { q: "What are your office hours?", a: "Administrative offices are open Monday to Friday, 8:00 AM – 5:00 PM, and Saturday 9:00 AM – 1:00 PM. The library has extended hours; Monday – Friday 8:00 AM – 8:00 PM, Saturday 9:00 AM – 4:00 PM, and Sunday 12:00 PM – 4:00 PM." },
