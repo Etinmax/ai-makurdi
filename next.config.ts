@@ -1,9 +1,7 @@
-
-
-const NextConfig = {
- eslint: {
-    ignoreDuringBuilds: true, // ← skips ALL eslint errors during build
-  },};
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
 
 export default nextConfig;
-
