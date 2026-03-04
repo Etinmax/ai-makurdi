@@ -20,11 +20,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={17} className="text-[#3b4fd8] shrink-0" />
-                <span>rector@aimakurdi.ng</span>
+                <span>rector@makurdiai.com.ng</span>
               </div>
               <div className="flex items-center gap-3">
                 <Globe size={17} className="text-[#3b4fd8] shrink-0" />
-                <span>www.aimakurdi.ng</span>
+                <span>www.makurdiai.com.ng</span>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={17} className="text-[#3b4fd8] mt-0.5 shrink-0" />
