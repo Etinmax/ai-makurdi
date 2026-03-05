@@ -79,7 +79,7 @@ export default function Header() {
           <div className="bg-white px-2 py-2 rounded-md shadow-md self-start">
             <img src="/ailogo.png" alt="logo" className="w-[60px] h-[68px] object-contain" />
           </div>
-          <h2 className="md:text-[30px] text-[29px] md:font-[800] font-[750] leading-tight text-center" style={helvetica}>
+          <h2 className="md:text-[30px] text-[35px] md:font-[800] font-[750] leading-tight text-center" style={helvetica}>
             AUGUSTINIAN INSTITUTE, MAKURDI
           </h2>
           <p className="text-[13px] opacity-90 leading-snug text-center">

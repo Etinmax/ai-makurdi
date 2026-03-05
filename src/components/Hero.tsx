@@ -15,14 +15,14 @@ export default function Hero() {
       {/* Content */}
   <div className="relative z-10 max-w-[700px] px-6">
   <h2
-    className="text-[40px] font-bold leading-normal tracking-wide"
+    className="md:text-[40px] text-[32px] font-[600] leading-normal tracking-wide"
     style={{ animation: "slideUp 0.9s ease 0.5s forwards", opacity: 0 }}
   >
     Welcome to the Augustinian Institute, Makurdi
   </h2>
 
   <p
-    className="mt-4 text-lg font-normal"
+    className="mt-4 md:text-lg md:text-[16px] text-[14px] font-[400] leading-relaxed opacity-90"
     style={{ animation: "slideUp 1.5s ease 0.2s forwards", opacity: 0 }}
   >
     A Centre of Wisdom, Faith, and Intellectual Formation

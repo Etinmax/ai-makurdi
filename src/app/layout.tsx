@@ -8,8 +8,8 @@ import "@fontsource/open-sans/400.css"
 import "@fontsource/open-sans/600.css"
 
 export const metadata = {
-  title: "Business Website",
-  description: "Modern one-page business website",
+  title: "Augustinian Institute",
+  description: "A Centre of Wisdom, Faith and Intellectual Formation",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
