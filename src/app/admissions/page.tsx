@@ -535,11 +535,11 @@ export default function AdmissionsPage() {
               </div>
               <div className="flex flex-col gap-4">
                 {[
-                  { icon: <Phone size={15} className="text-[#0e6dfa]" />, label: "Phone", val: "+234 703 182 8531, +234 803 059 3538" },
-                  { icon: <Mail size={15} className="text-[#0e6dfa]" />, label: "Email", val: "admissions@aimakurdi.ng" },
-                  { icon: <MapPin size={15} className="text-[#0e6dfa]" />, label: "Address", val: "Admissions Office, Augustinian Institute, Otukpo Road, P.O Box 584, Makurdi" },
+                  { icon: <Phone size={15} className="text-[#0e6dfa]" />, label: "Phone", val: "+234 902 480 8977, +234 916 161 3842" },
+                  { icon: <Mail size={15} className="text-[#0e6dfa]" />, label: "Email", val: "admissions@makurdiai.com.ng" },
+                  { icon: <MapPin size={15} className="text-[#0e6dfa]" />, label: "Address", val: "Admissions Office, Augustinian Institute, Old GRA High Level, P.O Box 234, Makurdi" },
                   { icon: <Clock size={15} className="text-[#0e6dfa]" />, label: "Office Hours", val: "8:00 AM - 5:00 PM (Monday - Friday)" },
-                  { icon: <Globe size={15} className="text-[#0e6dfa]" />, label: "Website", val: "www.aimakurdi.ng" },
+                  { icon: <Globe size={15} className="text-[#0e6dfa]" />, label: "Website", val: "www.makurdiai.com.ng" },
                 ].map((row, i) => (
                   <div key={i} className="flex items-start gap-3 text-[18px] text-gray-700">
                     <div className="w-6 h-6  flex items-center justify-center shrink-0 mt-px ">

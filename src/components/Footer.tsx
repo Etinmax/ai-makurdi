@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex flex-col gap-5 text-[15px] text-gray-300">
               <div className="flex items-start gap-3">
                 <Phone size={17} className="text-[#3b4fd8] mt-0.5 shrink-0" />
-                <span>+2347031828531, +2348030593538</span>
+                <span>+2349161613842, +2349024808977</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={17} className="text-[#3b4fd8] shrink-0" />
@@ -28,7 +28,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={17} className="text-[#3b4fd8] mt-0.5 shrink-0" />
-                <span>Otukpo Road, P.O Box 584, Makurdi</span>
+                <span>Old GRA-High Level, P.O Box 234, Makurdi</span>
               </div>
             </div>
 

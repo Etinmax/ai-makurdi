@@ -165,7 +165,7 @@ export default function AboutPage() {
 
             {/* Main Image */}
             <img
-              src="/aif.jpg"
+              src="/abc.jpg"
               alt="About institute"
               className="rounded-lg shadow-md w-full object-cover"
             />
