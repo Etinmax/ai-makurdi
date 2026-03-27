@@ -59,7 +59,7 @@ export async function POST(req: Request) {
           </div>
 
           <p style="margin-top: 24px; font-size: 12px; color: #9ca3af; border-top: 1px solid #e5e7eb; padding-top: 16px;">
-            This message was sent via the contact form at makurdiai.com.ng. Reply directly to this email to respond to Augustinian Institute .
+            This message was sent via the contact form at makurdiai.com.ng. Reply directly to this email to respond to ${firstName}.
           </p>
         </div>
       `,
